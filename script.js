@@ -1,18 +1,22 @@
 const noBtn = document.getElementById("noBtn");
 const yesBtn = document.getElementById("yesBtn");
 
-noBtn.addEventListener("mouseover", () => {
-  const container = document.querySelector(".card");
+let offsetX = 0;
+let offsetY = 0;
 
-  const maxX = container.clientWidth - noBtn.offsetWidth;
-  const maxY = container.clientHeight - noBtn.offsetHeight;
+noBtn.addEventListener("mouseenter", () => {
+  const maxX = window.innerWidth / 3;
+  const maxY = window.innerHeight / 4;
 
-  const randomX = Math.floor(Math.random() * maxX);
-  const randomY = Math.floor(Math.random() * maxY);
+  const moveX = (Math.random() - 0.5) * maxX;
+  const moveY = (Math.random() - 0.5) * maxY;
 
-  noBtn.style.left = randomX + "px";
-  noBtn.style.top = randomY + "px";
-});
+  offsetX += moveX;
+  offsetY += moveY;
+
+  noBtn.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
+})
+
 
 yesBtn.addEventListener("click", () => {
   document.body.innerHTML = `
@@ -25,8 +29,10 @@ yesBtn.addEventListener("click", () => {
         <img src="images/ticket2.png" alt="Concert Ticket 2">
       </div>
 
-      <p>Happy Valentine’s Day ❤️</p>
+      <p>Happy Valentine’s Day, Love you ❤️</p>
     </div>
   `;
 });
+
+;
 
