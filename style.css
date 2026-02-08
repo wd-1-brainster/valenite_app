@@ -1,0 +1,75 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  font-family: 'Arial', sans-serif;
+
+  /* Pink Valentine background */
+  background: linear-gradient(135deg, #ffb3c6, #ffc8dd);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background: #fff;
+  padding: 50px 40px;
+  border-radius: 25px;
+  text-align: center;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+  max-width: 750px;
+  width: 90%;
+}
+
+h1 {
+  margin-bottom: 30px;
+  color: #ff4d6d;
+}
+
+.buttons {
+  position: relative;
+  height: 120px;
+}
+
+button {
+  padding: 12px 28px;
+  font-size: 18px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+#yesBtn {
+  background-color: #ff4d6d;
+  color: white;
+  margin-right: 15px;
+}
+
+#noBtn {
+  background-color: #adb5bd;
+  color: white;
+  position: absolute;
+}
+
+
+.tickets {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.tickets img {
+  width: 200px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
