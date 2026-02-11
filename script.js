@@ -36,7 +36,7 @@ yesBtn.addEventListener("click", () => {
           <img src="images/ticket2.png" alt="Concert Ticket 2">
         </div>
 
-        <p>Happy Valentine’s Day ❤️</p>
+        <p>Happy Valentine’s Day ❤️, Love you</p>
       </div>
     `;
   }, 1200);
