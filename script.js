@@ -19,20 +19,43 @@ noBtn.addEventListener("mouseenter", () => {
 
 
 yesBtn.addEventListener("click", () => {
-  document.body.innerHTML = `
-    <div class="container">
-      <h1>Best decision ever 😘💖</h1>
-      <p>Surprise… we’re going to a concert 🎶🔥</p>
+  // Heart explosion
+  for (let i = 0; i < 30; i++) {
+    createHeart();
+  }
 
-      <div class="tickets">
-        <img src="images/ticket1.png" alt="Concert Ticket 1">
-        <img src="images/ticket2.png" alt="Concert Ticket 2">
+  // Reveal message + tickets
+  setTimeout(() => {
+    document.body.innerHTML = `
+      <div class="card">
+        <h1>Best decision ever 😘💖</h1>
+        <p>Surprise… we’re going to a concert 🎶🔥</p>
+
+        <div class="tickets">
+          <img src="images/ticket1.png" alt="Concert Ticket 1">
+          <img src="images/ticket2.png" alt="Concert Ticket 2">
+        </div>
+
+        <p>Happy Valentine’s Day ❤️</p>
       </div>
-
-      <p>Happy Valentine’s Day, Love you ❤️</p>
-    </div>
-  `;
+    `;
+  }, 1200);
 });
 
-;
+
+function createHeart() {
+  const heart = document.createElement("div");
+  heart.className = "heart";
+  heart.innerText = "💖";
+
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.animationDuration = 2 + Math.random() * 2 + "s";
+
+  document.body.appendChild(heart);
+
+  setTimeout(() => {
+    heart.remove();
+  }, 3000);
+}
+
 
