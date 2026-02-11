@@ -7,13 +7,25 @@ body {
   height: 100vh;
   font-family: 'Arial', sans-serif;
 
-  /* Pink Valentine background */
-  background: linear-gradient(135deg, #ffb3c6, #ffc8dd);
+  background-image: url("images/valentine_bg_1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 192, 203, 0.5); /* soft pink overlay */
+  z-index: -1;
+}
+
 
 .card {
   background: #fff;
@@ -73,7 +85,7 @@ button {
 #noBtn {
   transition: transform 0.15s ease;
 }
-button: hover {
+button:hover {
   transform: scale(1.05);
 }
 
